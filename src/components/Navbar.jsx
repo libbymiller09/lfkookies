@@ -1,6 +1,5 @@
 import { Badge } from '@material-ui/core';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
-import React from 'react'
 import styledComponents from 'styled-components';
 
 const Container = styledComponents.div`
