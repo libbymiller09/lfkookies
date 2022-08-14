@@ -5,12 +5,14 @@ import Navbar from "../components/Navbar";
 import Email from "../components/Email";
 import Footer from '../components/Footer';
 import { Add, Remove } from '@material-ui/icons';
+import { mobile } from '../responsive';
 
 const Container = styledComponents.div``;
 
 const Wrapper = styledComponents.div`
   padding: 50px;
   display: flex;
+  ${mobile({ padding: "10px", flexDirection: "column" })};
 `;
 
 const ImgContainer = styledComponents.div`
@@ -22,11 +24,13 @@ const Image = styledComponents.img`
   width: 100%;
   height: 90vh;
   object-fit: cover;
+  ${mobile({ height: "40vh" })};
 `;
 
 const InfoContainer = styledComponents.div`
   flex: 1;
   padding: 0px 50px;
+  ${mobile({ padding: "10px" })};
 `;
 
 const Title = styledComponents.h1`
@@ -47,7 +51,8 @@ const FilterContainer = styledComponents.div`
   justify-content: space-between;
   width: 50%;
   margin: 30px 0px;
-`;
+  ${mobile({ width: "100%" })}
+  `;
 
 const Filter = styledComponents.div`
   display: flex;
@@ -73,6 +78,7 @@ const AddContainer = styledComponents.div`
   align-items: center;
   width: 50%;
   justify-content: space-between;
+  ${mobile({ width: "100%" })};
 `;
 
 const AmountContainer = styledComponents.div`

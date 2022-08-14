@@ -4,11 +4,13 @@ import styledComponents from 'styled-components';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { mobile } from '../responsive';
 
 const Container = styledComponents.div``;
 
 const Wrapper = styledComponents.div`
   padding: 20px;
+  ${mobile({ padding: "10px" })};
 `;
 
 const Title = styledComponents.h1`
@@ -33,7 +35,9 @@ const TopButton = styledComponents.button`
   color: ${(props) => props.type === "filled" && "white"};
 `;
 
-const TopTexts = styledComponents.div``;
+const TopTexts = styledComponents.div`
+${mobile({ display: "none" })};
+`;
 
 const TopText = styledComponents.span`
 text-decoration: underline;
@@ -44,6 +48,7 @@ margin: 0px 10px;
 const Bottom = styledComponents.div`
   display: flex;
   justify-content: center;
+  ${mobile({ flexDirection: "column" })};
 `;
 
 const Info = styledComponents.div`
@@ -53,6 +58,7 @@ const Info = styledComponents.div`
 const Product = styledComponents.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: "column" })};
 `;
 
 const ProductDetails = styledComponents.div`
@@ -92,11 +98,13 @@ const ProductAmountContainer = styledComponents.div`
 const ProductAmount = styledComponents.div`
   font-size: 24px;
   margin: 5px;
+  ${mobile({ margin: "5px 15px" })};
 `;
 
 const ProductPrice = styledComponents.div`
   font-size: 30px;
   font-weight: 200;
+  ${mobile({ marginBottom: "20px" })};
 `;
 
 const Hr = styledComponents.hr`
